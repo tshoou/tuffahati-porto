@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby's First Nibbles - Tuffahati Sholihah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #05050A;                 /* Deep Cosmic Dark */
+            --bg2: #0B0C10;                /* Secondary Dark */
+            --surface: rgba(255, 255, 255, 0.03); /* Translucent Glass */
+            --border: rgba(255, 255, 255, 0.08);  /* Subtle Bright Border */
+            --purple: #8B5CF6;             /* Vibrant Violet */
+            --purple-light: #C4B5FD;       /* Soft Lavender */
+            --purple-dim: rgba(139, 92, 246, 0.15); /* Dim Violet Glow */
+            --text: #F8FAFC;               /* Crisp Cool White */
+            --muted: #94A3B8;              /* Cool Slate Gray */
+            --muted2: #475569;             /* Dark Slate */
+            --accent-pill: #8B5CF6;        /* Button accent */
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Nav */
+        nav {
+            padding: 24px 56px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            background: var(--bg2);
+        }
+
+        .back-btn {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: color 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-btn:hover {
+            color: var(--text);
+        }
+
+        /* Project Layout */
+        .project-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 24px 120px;
+            animation: fadeIn 0.8s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .modal-eyebrow { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--purple); margin-bottom: 12px; }
+        .modal-title { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 400; color: var(--text); line-height: 1.1; margin-bottom: 24px; }
+        
+        .modal-meta { display: flex; gap: 32px; margin-bottom: 48px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 24px 0; }
+        .modal-meta-item { font-size: 0.85rem; color: var(--muted); }
+        .modal-meta-item strong { color: var(--text); font-weight: 500; display: block; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 4px; }
+
+        .modal-sec-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; font-style: italic; color: var(--purple-light); border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-bottom: 20px; margin-top: 48px; }
+        .modal-text { color: var(--muted); font-size: 0.95rem; line-height: 1.8; font-weight: 300; }
+        
+        .nav-cta {
+            background: var(--accent-pill);
+            color: #111;
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            padding: 10px 24px;
+            border-radius: 100px;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .nav-cta:hover { background: var(--purple-light); transform: translateY(-1px); }
+
+        .process-img-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 16px 0; }
+        
+        /* Footer */
+        footer { padding: 28px 56px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; background: var(--bg); }
+        .footer-copy { color: var(--muted2); font-size: 0.78rem; }
+        .footer-name { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--purple); }
+
+        @media (max-width: 960px) {
+            nav { padding: 16px 24px; }
+            .project-container { padding: 48px 24px 80px; }
+            .modal-title { font-size: 2.2rem; }
+            .modal-meta { flex-direction: column; gap: 16px; align-items: flex-start; }
+            footer { padding: 20px 24px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="portofolio-tuffahati.html" class="back-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Back to Portfolio
+        </a>
+    </nav>
+    <div class="project-container">
+        <div class="modal-eyebrow">App Design</div>
+        <div class="modal-title">Baby's First Nibbles</div>
+        <div class="modal-meta">
+            <div class="modal-meta-item"><strong>Role</strong>UI/UX Designer</div>
+            <div class="modal-meta-item"><strong>Collaborator</strong>Paediatric Nutritionist</div>
+        </div>
+        <div style="margin-bottom: 32px; height: 180px; background: linear-gradient(135deg, var(--surface) 0%, rgba(124,111,173,0.1) 100%); border-radius: 8px; border: 1px dashed var(--border); display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0.8;">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke="var(--purple-light)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div style="margin-top: 16px; font-weight: 500; font-size: 1.1rem; letter-spacing: 2px; color: var(--purple-light);">APP SCREENS COMING SOON</div>
+      </div>
+
+      <p class="modal-text">Introducing solids is a major milestone in a baby’s development. Around 6 months of age, babies begin transitioning from an exclusively milk-based diet to a combination of breast milk or formula and complementary foods.</p>
+      
+      <p class="modal-text" style="margin-top: 12px;">At this stage, nutrition becomes even more important — particularly nutrients like iron, zinc, and key vitamins and minerals. At the same time, feeding is not just about nutrition. It is also about developing coordination, exploring textures, and learning how to eat.</p>
+
+      <div class="modal-sec-title">Key Focus: Simple & Nutrient-Dense</div>
+      <p class="modal-text">This app focuses on simple, nutrient-dense meals that support both nutrition and development, without overcomplicating the process.</p>
+      <p class="modal-text" style="margin-top: 12px;">Breast milk or formula should still remain the primary source of nutrition throughout the first year, with solid foods gradually increasing over time as babies build confidence, skill, and appetite. Working closely with a paediatric nutritionist, I designed this app to guide parents intuitively through this crucial developmental stage.</p>
+
+      <div style="margin-top: 48px; background: var(--surface); padding: 24px; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-align: center;">
+          <p class="modal-text" style="font-style: italic; color: var(--purple-light);">Keep an eye out for full high-fidelity screenshots, prototypes, and deep dives once the app design wraps up!</p>
+      </div>
+    </div>
+    <footer>
+        <div class="footer-copy">© 2025 <span class="footer-name">Tuffahati Sholihah</span> — Designer</div>
+        <div class="footer-copy">Tangerang Selatan, Indonesia</div>
+    </footer>
+</body>
+</html>

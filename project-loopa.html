@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loopa - Tuffahati Sholihah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #05050A;                 /* Deep Cosmic Dark */
+            --bg2: #0B0C10;                /* Secondary Dark */
+            --surface: rgba(255, 255, 255, 0.03); /* Translucent Glass */
+            --border: rgba(255, 255, 255, 0.08);  /* Subtle Bright Border */
+            --purple: #8B5CF6;             /* Vibrant Violet */
+            --purple-light: #C4B5FD;       /* Soft Lavender */
+            --purple-dim: rgba(139, 92, 246, 0.15); /* Dim Violet Glow */
+            --text: #F8FAFC;               /* Crisp Cool White */
+            --muted: #94A3B8;              /* Cool Slate Gray */
+            --muted2: #475569;             /* Dark Slate */
+            --accent-pill: #8B5CF6;        /* Button accent */
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Nav */
+        nav {
+            padding: 24px 56px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            background: var(--bg2);
+        }
+
+        .back-btn {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            transition: color 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-btn:hover {
+            color: var(--text);
+        }
+
+        /* Project Layout */
+        .project-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 24px 120px;
+            animation: fadeIn 0.8s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .modal-eyebrow { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--purple); margin-bottom: 12px; }
+        .modal-title { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 400; color: var(--text); line-height: 1.1; margin-bottom: 24px; }
+        
+        .modal-meta { display: flex; gap: 32px; margin-bottom: 48px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 24px 0; }
+        .modal-meta-item { font-size: 0.85rem; color: var(--muted); }
+        .modal-meta-item strong { color: var(--text); font-weight: 500; display: block; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 4px; }
+
+        .modal-sec-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; font-style: italic; color: var(--purple-light); border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-bottom: 20px; margin-top: 48px; }
+        .modal-text { color: var(--muted); font-size: 0.95rem; line-height: 1.8; font-weight: 300; }
+        
+        .nav-cta {
+            background: var(--accent-pill);
+            color: #111;
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            padding: 10px 24px;
+            border-radius: 100px;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .nav-cta:hover { background: var(--purple-light); transform: translateY(-1px); }
+
+        .process-img-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 16px 0; }
+        
+        /* Footer */
+        footer { padding: 28px 56px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; background: var(--bg); }
+        .footer-copy { color: var(--muted2); font-size: 0.78rem; }
+        .footer-name { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--purple); }
+
+        @media (max-width: 960px) {
+            nav { padding: 16px 24px; }
+            .project-container { padding: 48px 24px 80px; }
+            .modal-title { font-size: 2.2rem; }
+            .modal-meta { flex-direction: column; gap: 16px; align-items: flex-start; }
+            footer { padding: 20px 24px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="portofolio-tuffahati.html" class="back-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Back to Portfolio
+        </a>
+    </nav>
+    <div class="project-container">
+        <div class="modal-eyebrow">Brain Training App · 35 Days</div>
+        <div class="modal-title">Loopa</div>
+        <div class="modal-meta">
+            <div class="modal-meta-item"><strong>Role</strong>UX Researcher & UI/UX Designer</div>
+            <div class="modal-meta-item"><strong>Team</strong>Team of 2 designers + 3 coders</div>
+        </div>
+        <p class="modal-text">Loopa: Reclaiming Independence Through Spatial Memory.</p>
+
+      <div class="modal-sec-title">1. The Invisible Barrier (The Problem)</div>
+      <p class="modal-text">The spark for Loopa came from observing a friend who constantly struggled to remember where she placed her objects and frequently became disoriented while navigating on her motorbike. Through deep interviews, I discovered this wasn't just "forgetfulness"—it was a deep-seated struggle with spatial memory and underdeveloped visual-motor skills.</p>
+      <p class="modal-text" style="font-style: italic; margin-top: 12px; font-weight: 500; color: var(--purple-light);">This matters because weak spatial ability directly impacts everyday autonomy:</p>
+      <ul class="modal-text" style="margin-top: 12px; padding-left: 24px; line-height: 1.8;">
+        <li><strong style="color: var(--text);">Safety Risks:</strong> Getting lost or confused while navigating urban spaces.</li>
+        <li><strong style="color: var(--text);">Independence:</strong> A growing reliance on others or GPS for even simple, familiar routes.</li>
+        <li><strong style="color: var(--text);">The Stress Cycle:</strong> Frequent frustration and embarrassment from misplacing items lead to increased daily anxiety.</li>
+      </ul>
+
+      <div class="modal-sec-title">2. Mapping the Empathy (The Design Process)</div>
+      <p class="modal-text">To develop an end-to-end solution, I moved beyond the technical problem and mapped the emotional landscape of the user. My empathy map revealed a critical tension: users were frustrated by their "naturally bad" memory but were intimidated by the idea of "training".</p>
+      <p class="modal-text" style="margin-top: 12px;">The insights were clear:</p>
+      <ul class="modal-text" style="margin-top: 12px; padding-left: 24px; line-height: 1.8;">
+        <li><strong style="color: var(--purple-light);">"Does":</strong> Users were frequently checking their bags or pockets to relocate items, a repetitive behavior born from uncertainty.</li>
+        <li><strong style="color: var(--purple-light);">"Feels":</strong> There was a significant weight of embarrassment and anxiety when others had to remind them of things repeatedly.</li>
+        <li><strong style="color: var(--purple-light);">"Thinks":</strong> The most vital design constraint I uncovered was the user's desire: "I want to improve, but training needs to be simple and not stressful".</li>
+      </ul>
+
+      <div class="modal-sec-title">3. Science Meets Play (The Solution)</div>
+      <p class="modal-text">I identified the Corsi Block Span—a traditional psychological task used to measure spatial short-term memory—as the core of the solution. Traditionally, this is a clinical tool, but for Loopa, I reimagined it as a daily "Brain Game."</p>
+      <p class="modal-text" style="margin-top: 12px;">The goal was to move from "assessment" to "improvement," providing a structured way for adults to train their spatial memory in a controlled, digital environment that simulates the cognitive patterns needed for real-world navigation and object recall.</p>
+
+      <div class="modal-sec-title">4. Humanizing the Cognitive (The Visual Translation)</div>
+      <p class="modal-text">As a designer, my task was to translate a rigid clinical test into an engaging mobile interface.</p>
+      <ul class="modal-text" style="margin-top: 12px; padding-left: 24px; line-height: 1.8;">
+        <li><strong style="color: var(--text);">Simplifying the Complex:</strong> I took the abstract blocks of the Corsi task and integrated them into a clean, distraction-free UI to ensure the user's cognitive load was spent on the exercise, not on figuring out how to use the app.</li>
+        <li><strong style="color: var(--text);">Low-Stress Interaction:</strong> Following the "not stressful" requirement from my research, I focused on clear visual feedback (like the "Done" button and sequence highlights) to make the experience feel supportive.</li>
+      </ul>
+
+      <div class="modal-sec-title">5. Visual Key Highlights</div>
+      <ul class="modal-text" style="margin-top: 12px; padding-left: 24px; line-height: 1.8;">
+        <li><strong style="color: var(--text);">The Empathy-Driven Core:</strong> Every design decision—from the sequence of the blocks to the navigation flow—was grounded in the frustration and needs identified during the empathy mapping phase.</li>
+        <li><strong style="color: var(--text);">Corsi Block Integration:</strong> By digitizing the Corsi Block Span, Loopa provides a scientifically-backed method to challenge and improve spatial memory.</li>
+        <li><strong style="color: var(--text);">A Path to Independence:</strong> The final design isn't just about high scores; it's about reducing the user's reliance on GPS and external reminders, ultimately fostering greater confidence in their daily life.</li>
+      </ul>
+
+      <div class="modal-sec-title" style="margin-top: 48px;">Download Document Detail</div>
+      <div style="background: var(--surface); padding: 24px; border: 1px dashed var(--border); border-radius: 8px; display: flex; flex-direction: column; align-items: flex-start; gap: 16px;">
+        <p class="modal-text" style="font-size: 0.85rem; margin: 0;"><strong style="color: var(--purple-light);">Loopa is now live!</strong> Train your brain and test your spatial memory directly from your phone.</p>
+        <a href="https://apps.apple.com/id/app/loopa-spatial-memory-games/id6752804149" target="_blank" class="nav-cta" style="display: inline-flex; align-items: center; gap: 8px; background: var(--text); color: var(--bg);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.19-2.05-.2-3.1-.73-.97-.49-2.14-1.12-3.66-1.12-1.55 0-2.65.59-3.61 1.1-.99.52-1.92.9-2.88.75-1.04-.15-2.2-.95-3.32-2.33C-2 14.86.34 6.94 3.05 6.9c.92.05 1.85.5 2.5 1.05.6.5 1.48 1.15 2.52 1.15 1.4 0 2.2-.6 2.92-1.18.91-.71 2.03-1.17 3.25-1.1 1.34.02 2.62.59 3.5 1.33-2.15 1.25-2.6 3.65-1.28 5.25 1.15 1.4 3.05 1.76 4.3 1.25-.33 1.35-1.12 2.76-2.19 4.14-.77 1.02-1.8 2.08-2.62 2.19zM12.02 5.37C11.85 2.89 13.9.72 16.27.5c.22 2.65-2.11 4.95-4.25 4.87z"/></svg>
+          Available on the App Store
+        </a>
+      </div>
+    </div>
+    <footer>
+        <div class="footer-copy">© 2025 <span class="footer-name">Tuffahati Sholihah</span> — Designer</div>
+        <div class="footer-copy">Tangerang Selatan, Indonesia</div>
+    </footer>
+</body>
+</html>
